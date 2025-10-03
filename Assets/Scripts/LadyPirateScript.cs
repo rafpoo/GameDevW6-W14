@@ -29,4 +29,10 @@ public class LadyPirateScript : MonoBehaviour
             anim.SetBool("lompat", true);
         }
     }
+
+    public void ResetLompat()
+    {
+        anim.SetBool("lompat", false);
+        Debug.Log("Triggered");
+    }
 }
