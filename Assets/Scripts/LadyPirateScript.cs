@@ -23,5 +23,10 @@ public class LadyPirateScript : MonoBehaviour
         {
             anim.SetBool("jalan", false);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetBool("lompat", true);
+        }
     }
 }
