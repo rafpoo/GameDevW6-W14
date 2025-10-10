@@ -19,6 +19,10 @@ public class SkeletonScript : MonoBehaviour
     bool heroInRange = false;
     Animator anim;
 
+    [Header("Attack Settings")]
+    [SerializeField] float attackRate = 1f;
+    private float nextAttackTime = 0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -76,6 +80,28 @@ public class SkeletonScript : MonoBehaviour
 
     void ChaseHero()
     {
+        float distance = Vector3.Distance(transform.position, hero.position);
+
+        if (distance < 2f)
+        {
+            if (Time.time >= nextAttackTime)
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
+
+            Vector3 arahAttack = hero.position - transform.position;
+            arahAttack.y = 0;
+            if (arahAttack != Vector3.zero) transform.rotation = Quaternion.LookRotation(arahAttack);
+
+            return;
+        }
+        // if (Vector3.Distance(transform.position, hero.position) < 2f)
+        // {
+        //     Attack();
+        //     return;
+        // }
+
         Vector3 posHero = new Vector3(hero.position.x, transform.position.y, hero.position.z);
         transform.position = Vector3.MoveTowards(transform.position, posHero, chaseSpeed * Time.deltaTime);
 
@@ -83,6 +109,13 @@ public class SkeletonScript : MonoBehaviour
         if (arah != Vector3.zero) transform.rotation = Quaternion.LookRotation(arah);
 
         anim.SetFloat("speed", chaseSpeed);
+        anim.SetBool("isJalan", true);
+    }
+
+    private void Attack()
+    {
+        anim.SetTrigger("isSerang");
+        anim.SetBool("isJalan", false);
     }
 
     private void OnTriggerEnter(Collider other)
