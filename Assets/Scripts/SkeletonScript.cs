@@ -82,7 +82,7 @@ public class SkeletonScript : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, hero.position);
 
-        if (distance < 2f)
+        if (distance <= 2f)
         {
             if (Time.time >= nextAttackTime)
             {
@@ -114,8 +114,16 @@ public class SkeletonScript : MonoBehaviour
 
     private void Attack()
     {
-        anim.SetTrigger("isSerang");
         anim.SetBool("isJalan", false);
+        anim.SetTrigger("isSerang");
+    }
+
+    public void DealDamage()
+    {
+        if (Vector3.Distance(transform.position, hero.position) <= 2f)
+        {
+            hero.GetComponent<LadyPirateScript>()?.TakeDamage();
+        }
     }
 
     private void OnTriggerEnter(Collider other)

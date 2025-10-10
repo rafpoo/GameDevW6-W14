@@ -17,6 +17,8 @@ public class LadyPirateScript : MonoBehaviour
     // COMBO ATTACKKKK
     float comboAtk = 0f;
     float lastAtk = 0;
+    private bool isHit = false;
+    [SerializeField] private float hitCooldown = 0.5f;
 
     void Start()
     {
@@ -45,6 +47,21 @@ public class LadyPirateScript : MonoBehaviour
             Debug.Log("masuk " + comboAtk);
             GetComponent<Animator>().SetFloat("serang", comboAtk);
         }
+    }
+
+    public void TakeDamage()
+    {
+        if (isHit) return;
+        anim.SetTrigger("hit");
+
+        StartCoroutine(HitCooldown());
+    }
+
+    IEnumerator HitCooldown()
+    {
+        isHit = true;
+        yield return new WaitForSeconds(hitCooldown);
+        isHit = false;
     }
 
     public void ResetLompat()
