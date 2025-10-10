@@ -4,33 +4,30 @@ using UnityEngine;
 
 public class LadyPirateScript : MonoBehaviour
 {
+    // MOVEMENTTTT
     Animator anim;
+    float speed = 5f;
+    float rotationSpeed = 10f;
+    public float gravity = -9.8f;
+    public Transform cameraTransform;
 
+    private CharacterController controller;
+    private Vector3 velocity;
+
+    // COMBO ATTACKKKK
     float comboAtk = 0f;
     float lastAtk = 0;
-    // Start is called before the first frame update
+
     void Start()
     {
         anim = GetComponent<Animator>();
+        controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float v = Input.GetAxis("Vertical");
-        if (v != 0)
-        {
-            anim.SetBool("jalan", true);
-        }
-        else
-        {
-            anim.SetBool("jalan", false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            anim.SetBool("lompat", true);
-        }
+        Movement();
 
         // serang
         if (Input.GetButtonDown("Fire1"))
@@ -54,5 +51,59 @@ public class LadyPirateScript : MonoBehaviour
     {
         anim.SetBool("lompat", false);
         Debug.Log("Triggered");
+    }
+
+    public void Movement()
+    {
+        float v = Input.GetAxisRaw("Vertical");
+        float h = Input.GetAxisRaw("Horizontal");
+
+        Vector3 moveDir = Vector3.ProjectOnPlane(
+            Camera.main.transform.forward * v + Camera.main.transform.right * h,
+            Vector3.up
+        ).normalized;
+
+        if (moveDir.magnitude > 0.1f)
+        {
+            anim.SetBool("jalan", true);
+
+            Quaternion targetRotation = Quaternion.LookRotation(moveDir);
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                targetRotation,
+                rotationSpeed * Time.deltaTime
+            );
+        }
+        else
+        {
+            anim.SetBool("jalan", false);
+        }
+
+        controller.Move(moveDir * speed * Time.deltaTime);
+
+        if (controller.isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
+
+        // transform.position += Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up) * v * speed * Time.deltaTime;
+        // transform.position += Vector3.ProjectOnPlane(Camera.main.transform.right, Vector3.up) * h * speed * Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetBool("lompat", true);
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 8f;
+        }
+        else
+        {
+            speed = 5f;
+        }
     }
 }
