@@ -27,8 +27,16 @@ public class Hero : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
             transform.rotation = targetRotation;
 
-            transform.position += Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up) * v * Time.deltaTime * kecepatan;
-            transform.position += Vector3.ProjectOnPlane(Camera.main.transform.right, Vector3.up) * h * Time.deltaTime * kecepatan;
+            Vector3 moveForward = Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up);
+            moveForward.y = 0;
+            moveForward.Normalize();
+
+            Vector3 moveRight = Vector3.ProjectOnPlane(Camera.main.transform.right, Vector3.up);
+            moveRight.y = 0;
+            moveRight.Normalize();
+
+            transform.position += (moveForward * v + moveRight * h) * Time.deltaTime * kecepatan;
+
             GetComponent<Animator>().SetBool("StatJalan", true);
         }
         else
