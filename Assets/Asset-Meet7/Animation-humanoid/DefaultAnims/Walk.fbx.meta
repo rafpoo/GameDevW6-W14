@@ -1,214 +1,620 @@
 fileFormatVersion: 2
 guid: 980f51e50988f7a4b81cf7a4113ce3f4
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Chin
-    100002: Head
-    100004: Jaw
-    100006: JawBottom
-    100008: L_Ankle
-    100010: L_Arm
-    100012: L_ArmPit
-    100014: L_CheekLower
-    100016: L_CheekUpper
-    100018: L_Chin
-    100020: L_Clavicle
-    100022: L_Eye
-    100024: L_EyebrowInner
-    100026: L_EyebrowOuter
-    100028: L_EyeExpression
-    100030: L_EyelidLower
-    100032: L_EyelidUpper
-    100034: L_Forearm
-    100036: L_Hand
-    100038: L_Index1
-    100040: L_Index2
-    100042: L_Index3
-    100044: L_Jaw
-    100046: L_LipCorner
-    100048: L_LipLower
-    100050: L_LipUpper
-    100052: L_Middle1
-    100054: L_Middle2
-    100056: L_Middle3
-    100058: L_Nose
-    100060: L_Pinky1
-    100062: L_Pinky2
-    100064: L_Pinky3
-    100066: L_PinkyRingBase
-    100068: L_Ring1
-    100070: L_Ring2
-    100072: L_Ring3
-    100074: L_Shin
-    100076: L_Thigh
-    100078: L_Thumb1
-    100080: L_Thumb2
-    100082: L_Thumb3
-    100084: L_Toes
-    100086: L_Weapon
-    100088: L_Wrist
-    100090: Larynx
-    100092: LipLower
-    100094: LipUpper
-    100096: Mesh1
-    100098: Neck_Base
-    100100: Neck_Middle
-    100102: Pelvis
-    100104: R_Ankle
-    100106: R_Arm
-    100108: R_ArmPit
-    100110: R_CheekLower
-    100112: R_CheekUpper
-    100114: R_Chin
-    100116: R_Clavicle
-    100118: R_Eye
-    100120: R_EyebrowInner
-    100122: R_EyebrowOuter
-    100124: R_EyeExpression
-    100126: R_EyelidLower
-    100128: R_EyelidUpper
-    100130: R_Forearm
-    100132: R_Hand
-    100134: R_Index1
-    100136: R_Index2
-    100138: R_Index3
-    100140: R_Jaw
-    100142: R_LipCorner
-    100144: R_LipLower
-    100146: R_LipUpper
-    100148: R_Middle1
-    100150: R_Middle2
-    100152: R_Middle3
-    100154: R_Nose
-    100156: R_Pinky1
-    100158: R_Pinky2
-    100160: R_Pinky3
-    100162: R_PinkyRingBase
-    100164: R_Ring1
-    100166: R_Ring2
-    100168: R_Ring3
-    100170: R_Shin
-    100172: R_Thigh
-    100174: R_Thumb1
-    100176: R_Thumb2
-    100178: R_Thumb3
-    100180: R_Toes
-    100182: R_Weapon
-    100184: R_Wrist
-    100186: Root
-    100188: Spine1
-    100190: Spine2
-    100192: Spine3
-    100194: Trajectory
-    100196: //RootNode
-    400000: Chin
-    400002: Head
-    400004: Jaw
-    400006: JawBottom
-    400008: L_Ankle
-    400010: L_Arm
-    400012: L_ArmPit
-    400014: L_CheekLower
-    400016: L_CheekUpper
-    400018: L_Chin
-    400020: L_Clavicle
-    400022: L_Eye
-    400024: L_EyebrowInner
-    400026: L_EyebrowOuter
-    400028: L_EyeExpression
-    400030: L_EyelidLower
-    400032: L_EyelidUpper
-    400034: L_Forearm
-    400036: L_Hand
-    400038: L_Index1
-    400040: L_Index2
-    400042: L_Index3
-    400044: L_Jaw
-    400046: L_LipCorner
-    400048: L_LipLower
-    400050: L_LipUpper
-    400052: L_Middle1
-    400054: L_Middle2
-    400056: L_Middle3
-    400058: L_Nose
-    400060: L_Pinky1
-    400062: L_Pinky2
-    400064: L_Pinky3
-    400066: L_PinkyRingBase
-    400068: L_Ring1
-    400070: L_Ring2
-    400072: L_Ring3
-    400074: L_Shin
-    400076: L_Thigh
-    400078: L_Thumb1
-    400080: L_Thumb2
-    400082: L_Thumb3
-    400084: L_Toes
-    400086: L_Weapon
-    400088: L_Wrist
-    400090: Larynx
-    400092: LipLower
-    400094: LipUpper
-    400096: Mesh1
-    400098: Neck_Base
-    400100: Neck_Middle
-    400102: Pelvis
-    400104: R_Ankle
-    400106: R_Arm
-    400108: R_ArmPit
-    400110: R_CheekLower
-    400112: R_CheekUpper
-    400114: R_Chin
-    400116: R_Clavicle
-    400118: R_Eye
-    400120: R_EyebrowInner
-    400122: R_EyebrowOuter
-    400124: R_EyeExpression
-    400126: R_EyelidLower
-    400128: R_EyelidUpper
-    400130: R_Forearm
-    400132: R_Hand
-    400134: R_Index1
-    400136: R_Index2
-    400138: R_Index3
-    400140: R_Jaw
-    400142: R_LipCorner
-    400144: R_LipLower
-    400146: R_LipUpper
-    400148: R_Middle1
-    400150: R_Middle2
-    400152: R_Middle3
-    400154: R_Nose
-    400156: R_Pinky1
-    400158: R_Pinky2
-    400160: R_Pinky3
-    400162: R_PinkyRingBase
-    400164: R_Ring1
-    400166: R_Ring2
-    400168: R_Ring3
-    400170: R_Shin
-    400172: R_Thigh
-    400174: R_Thumb1
-    400176: R_Thumb2
-    400178: R_Thumb3
-    400180: R_Toes
-    400182: R_Weapon
-    400184: R_Wrist
-    400186: Root
-    400188: Spine1
-    400190: Spine2
-    400192: Spine3
-    400194: Trajectory
-    400196: //RootNode
-    4300000: Mesh1
-    7400000: Walk
-    9500000: //RootNode
-    13700000: Mesh1
-    2186277476908879412: ImportLogs
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Chin
+  - first:
+      1: 100002
+    second: Head
+  - first:
+      1: 100004
+    second: Jaw
+  - first:
+      1: 100006
+    second: JawBottom
+  - first:
+      1: 100008
+    second: L_Ankle
+  - first:
+      1: 100010
+    second: L_Arm
+  - first:
+      1: 100012
+    second: L_ArmPit
+  - first:
+      1: 100014
+    second: L_CheekLower
+  - first:
+      1: 100016
+    second: L_CheekUpper
+  - first:
+      1: 100018
+    second: L_Chin
+  - first:
+      1: 100020
+    second: L_Clavicle
+  - first:
+      1: 100022
+    second: L_Eye
+  - first:
+      1: 100024
+    second: L_EyebrowInner
+  - first:
+      1: 100026
+    second: L_EyebrowOuter
+  - first:
+      1: 100028
+    second: L_EyeExpression
+  - first:
+      1: 100030
+    second: L_EyelidLower
+  - first:
+      1: 100032
+    second: L_EyelidUpper
+  - first:
+      1: 100034
+    second: L_Forearm
+  - first:
+      1: 100036
+    second: L_Hand
+  - first:
+      1: 100038
+    second: L_Index1
+  - first:
+      1: 100040
+    second: L_Index2
+  - first:
+      1: 100042
+    second: L_Index3
+  - first:
+      1: 100044
+    second: L_Jaw
+  - first:
+      1: 100046
+    second: L_LipCorner
+  - first:
+      1: 100048
+    second: L_LipLower
+  - first:
+      1: 100050
+    second: L_LipUpper
+  - first:
+      1: 100052
+    second: L_Middle1
+  - first:
+      1: 100054
+    second: L_Middle2
+  - first:
+      1: 100056
+    second: L_Middle3
+  - first:
+      1: 100058
+    second: L_Nose
+  - first:
+      1: 100060
+    second: L_Pinky1
+  - first:
+      1: 100062
+    second: L_Pinky2
+  - first:
+      1: 100064
+    second: L_Pinky3
+  - first:
+      1: 100066
+    second: L_PinkyRingBase
+  - first:
+      1: 100068
+    second: L_Ring1
+  - first:
+      1: 100070
+    second: L_Ring2
+  - first:
+      1: 100072
+    second: L_Ring3
+  - first:
+      1: 100074
+    second: L_Shin
+  - first:
+      1: 100076
+    second: L_Thigh
+  - first:
+      1: 100078
+    second: L_Thumb1
+  - first:
+      1: 100080
+    second: L_Thumb2
+  - first:
+      1: 100082
+    second: L_Thumb3
+  - first:
+      1: 100084
+    second: L_Toes
+  - first:
+      1: 100086
+    second: L_Weapon
+  - first:
+      1: 100088
+    second: L_Wrist
+  - first:
+      1: 100090
+    second: Larynx
+  - first:
+      1: 100092
+    second: LipLower
+  - first:
+      1: 100094
+    second: LipUpper
+  - first:
+      1: 100096
+    second: Mesh1
+  - first:
+      1: 100098
+    second: Neck_Base
+  - first:
+      1: 100100
+    second: Neck_Middle
+  - first:
+      1: 100102
+    second: Pelvis
+  - first:
+      1: 100104
+    second: R_Ankle
+  - first:
+      1: 100106
+    second: R_Arm
+  - first:
+      1: 100108
+    second: R_ArmPit
+  - first:
+      1: 100110
+    second: R_CheekLower
+  - first:
+      1: 100112
+    second: R_CheekUpper
+  - first:
+      1: 100114
+    second: R_Chin
+  - first:
+      1: 100116
+    second: R_Clavicle
+  - first:
+      1: 100118
+    second: R_Eye
+  - first:
+      1: 100120
+    second: R_EyebrowInner
+  - first:
+      1: 100122
+    second: R_EyebrowOuter
+  - first:
+      1: 100124
+    second: R_EyeExpression
+  - first:
+      1: 100126
+    second: R_EyelidLower
+  - first:
+      1: 100128
+    second: R_EyelidUpper
+  - first:
+      1: 100130
+    second: R_Forearm
+  - first:
+      1: 100132
+    second: R_Hand
+  - first:
+      1: 100134
+    second: R_Index1
+  - first:
+      1: 100136
+    second: R_Index2
+  - first:
+      1: 100138
+    second: R_Index3
+  - first:
+      1: 100140
+    second: R_Jaw
+  - first:
+      1: 100142
+    second: R_LipCorner
+  - first:
+      1: 100144
+    second: R_LipLower
+  - first:
+      1: 100146
+    second: R_LipUpper
+  - first:
+      1: 100148
+    second: R_Middle1
+  - first:
+      1: 100150
+    second: R_Middle2
+  - first:
+      1: 100152
+    second: R_Middle3
+  - first:
+      1: 100154
+    second: R_Nose
+  - first:
+      1: 100156
+    second: R_Pinky1
+  - first:
+      1: 100158
+    second: R_Pinky2
+  - first:
+      1: 100160
+    second: R_Pinky3
+  - first:
+      1: 100162
+    second: R_PinkyRingBase
+  - first:
+      1: 100164
+    second: R_Ring1
+  - first:
+      1: 100166
+    second: R_Ring2
+  - first:
+      1: 100168
+    second: R_Ring3
+  - first:
+      1: 100170
+    second: R_Shin
+  - first:
+      1: 100172
+    second: R_Thigh
+  - first:
+      1: 100174
+    second: R_Thumb1
+  - first:
+      1: 100176
+    second: R_Thumb2
+  - first:
+      1: 100178
+    second: R_Thumb3
+  - first:
+      1: 100180
+    second: R_Toes
+  - first:
+      1: 100182
+    second: R_Weapon
+  - first:
+      1: 100184
+    second: R_Wrist
+  - first:
+      1: 100186
+    second: Root
+  - first:
+      1: 100188
+    second: Spine1
+  - first:
+      1: 100190
+    second: Spine2
+  - first:
+      1: 100192
+    second: Spine3
+  - first:
+      1: 100194
+    second: Trajectory
+  - first:
+      1: 100196
+    second: //RootNode
+  - first:
+      4: 400000
+    second: Chin
+  - first:
+      4: 400002
+    second: Head
+  - first:
+      4: 400004
+    second: Jaw
+  - first:
+      4: 400006
+    second: JawBottom
+  - first:
+      4: 400008
+    second: L_Ankle
+  - first:
+      4: 400010
+    second: L_Arm
+  - first:
+      4: 400012
+    second: L_ArmPit
+  - first:
+      4: 400014
+    second: L_CheekLower
+  - first:
+      4: 400016
+    second: L_CheekUpper
+  - first:
+      4: 400018
+    second: L_Chin
+  - first:
+      4: 400020
+    second: L_Clavicle
+  - first:
+      4: 400022
+    second: L_Eye
+  - first:
+      4: 400024
+    second: L_EyebrowInner
+  - first:
+      4: 400026
+    second: L_EyebrowOuter
+  - first:
+      4: 400028
+    second: L_EyeExpression
+  - first:
+      4: 400030
+    second: L_EyelidLower
+  - first:
+      4: 400032
+    second: L_EyelidUpper
+  - first:
+      4: 400034
+    second: L_Forearm
+  - first:
+      4: 400036
+    second: L_Hand
+  - first:
+      4: 400038
+    second: L_Index1
+  - first:
+      4: 400040
+    second: L_Index2
+  - first:
+      4: 400042
+    second: L_Index3
+  - first:
+      4: 400044
+    second: L_Jaw
+  - first:
+      4: 400046
+    second: L_LipCorner
+  - first:
+      4: 400048
+    second: L_LipLower
+  - first:
+      4: 400050
+    second: L_LipUpper
+  - first:
+      4: 400052
+    second: L_Middle1
+  - first:
+      4: 400054
+    second: L_Middle2
+  - first:
+      4: 400056
+    second: L_Middle3
+  - first:
+      4: 400058
+    second: L_Nose
+  - first:
+      4: 400060
+    second: L_Pinky1
+  - first:
+      4: 400062
+    second: L_Pinky2
+  - first:
+      4: 400064
+    second: L_Pinky3
+  - first:
+      4: 400066
+    second: L_PinkyRingBase
+  - first:
+      4: 400068
+    second: L_Ring1
+  - first:
+      4: 400070
+    second: L_Ring2
+  - first:
+      4: 400072
+    second: L_Ring3
+  - first:
+      4: 400074
+    second: L_Shin
+  - first:
+      4: 400076
+    second: L_Thigh
+  - first:
+      4: 400078
+    second: L_Thumb1
+  - first:
+      4: 400080
+    second: L_Thumb2
+  - first:
+      4: 400082
+    second: L_Thumb3
+  - first:
+      4: 400084
+    second: L_Toes
+  - first:
+      4: 400086
+    second: L_Weapon
+  - first:
+      4: 400088
+    second: L_Wrist
+  - first:
+      4: 400090
+    second: Larynx
+  - first:
+      4: 400092
+    second: LipLower
+  - first:
+      4: 400094
+    second: LipUpper
+  - first:
+      4: 400096
+    second: Mesh1
+  - first:
+      4: 400098
+    second: Neck_Base
+  - first:
+      4: 400100
+    second: Neck_Middle
+  - first:
+      4: 400102
+    second: Pelvis
+  - first:
+      4: 400104
+    second: R_Ankle
+  - first:
+      4: 400106
+    second: R_Arm
+  - first:
+      4: 400108
+    second: R_ArmPit
+  - first:
+      4: 400110
+    second: R_CheekLower
+  - first:
+      4: 400112
+    second: R_CheekUpper
+  - first:
+      4: 400114
+    second: R_Chin
+  - first:
+      4: 400116
+    second: R_Clavicle
+  - first:
+      4: 400118
+    second: R_Eye
+  - first:
+      4: 400120
+    second: R_EyebrowInner
+  - first:
+      4: 400122
+    second: R_EyebrowOuter
+  - first:
+      4: 400124
+    second: R_EyeExpression
+  - first:
+      4: 400126
+    second: R_EyelidLower
+  - first:
+      4: 400128
+    second: R_EyelidUpper
+  - first:
+      4: 400130
+    second: R_Forearm
+  - first:
+      4: 400132
+    second: R_Hand
+  - first:
+      4: 400134
+    second: R_Index1
+  - first:
+      4: 400136
+    second: R_Index2
+  - first:
+      4: 400138
+    second: R_Index3
+  - first:
+      4: 400140
+    second: R_Jaw
+  - first:
+      4: 400142
+    second: R_LipCorner
+  - first:
+      4: 400144
+    second: R_LipLower
+  - first:
+      4: 400146
+    second: R_LipUpper
+  - first:
+      4: 400148
+    second: R_Middle1
+  - first:
+      4: 400150
+    second: R_Middle2
+  - first:
+      4: 400152
+    second: R_Middle3
+  - first:
+      4: 400154
+    second: R_Nose
+  - first:
+      4: 400156
+    second: R_Pinky1
+  - first:
+      4: 400158
+    second: R_Pinky2
+  - first:
+      4: 400160
+    second: R_Pinky3
+  - first:
+      4: 400162
+    second: R_PinkyRingBase
+  - first:
+      4: 400164
+    second: R_Ring1
+  - first:
+      4: 400166
+    second: R_Ring2
+  - first:
+      4: 400168
+    second: R_Ring3
+  - first:
+      4: 400170
+    second: R_Shin
+  - first:
+      4: 400172
+    second: R_Thigh
+  - first:
+      4: 400174
+    second: R_Thumb1
+  - first:
+      4: 400176
+    second: R_Thumb2
+  - first:
+      4: 400178
+    second: R_Thumb3
+  - first:
+      4: 400180
+    second: R_Toes
+  - first:
+      4: 400182
+    second: R_Weapon
+  - first:
+      4: 400184
+    second: R_Wrist
+  - first:
+      4: 400186
+    second: Root
+  - first:
+      4: 400188
+    second: Spine1
+  - first:
+      4: 400190
+    second: Spine2
+  - first:
+      4: 400192
+    second: Spine3
+  - first:
+      4: 400194
+    second: Trajectory
+  - first:
+      4: 400196
+    second: //RootNode
+  - first:
+      43: 4300000
+    second: Mesh1
+  - first:
+      74: 7400000
+    second: Walk
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Mesh1
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -217,11 +623,17 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Walk' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'Neck_Middle' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'R_Pinky1' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'R_Ring1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -233,41 +645,85 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Walk
+      internalID: 7400000
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Pelvis
       humanName: Hips
@@ -761,8 +1217,7 @@ ModelImporter:
     - name: L_Pinky3
       parentName: L_Pinky2
       position: {x: -0.013151468, y: -0.000000007953378, z: 0.0000000021410456}
-      rotation: {x: 0.00000011544945, y: -0.00000007916345, z: -0.000000044703494,
-        w: 1}
+      rotation: {x: 0.00000011544945, y: -0.00000007916345, z: -0.000000044703494, w: 1}
       scale: {x: 1.0000005, y: 1.0000006, z: 1}
     - name: L_Ring1
       parentName: L_PinkyRingBase
@@ -827,8 +1282,7 @@ ModelImporter:
     - name: L_Weapon
       parentName: L_Hand
       position: {x: -0.04670384, y: -0.01996111, z: -0.008943466}
-      rotation: {x: 0.000000008380563, y: 0.000000029802315, z: 0.000000089963144,
-        w: 1}
+      rotation: {x: 0.000000008380563, y: 0.000000029802315, z: 0.000000089963144, w: 1}
       scale: {x: 1.0000004, y: 0.99999964, z: 1}
     - name: Neck_Base
       parentName: Spine3
@@ -838,8 +1292,7 @@ ModelImporter:
     - name: Neck_Middle
       parentName: Neck_Base
       position: {x: -0.038354762, y: -0.0005415021, z: 0.000000007977024}
-      rotation: {x: -0.000000026971428, y: -0.00000003238673, z: -0.00000005960469,
-        w: -1}
+      rotation: {x: -0.000000026971428, y: -0.00000003238673, z: -0.00000005960469, w: -1}
       scale: {x: 1.0000001, y: 1.0000004, z: 1.0000001}
     - name: Head
       parentName: Neck_Middle
@@ -1089,8 +1542,7 @@ ModelImporter:
     - name: R_Middle3
       parentName: R_Middle2
       position: {x: 0.016399495, y: -0.00000030561756, z: 0.00000017861514}
-      rotation: {x: 0.000000013489394, y: -0.000000067360226, z: 0.000000074510524,
-        w: 1}
+      rotation: {x: 0.000000013489394, y: -0.000000067360226, z: 0.000000074510524, w: 1}
       scale: {x: 0.9999997, y: 0.9999999, z: 0.9999995}
     - name: R_Index1
       parentName: R_Hand
@@ -1184,14 +1636,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

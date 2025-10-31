@@ -1,42 +1,78 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
+    [Header("Movement Settings")]
+    public float movementSpeed = 3f;
     private Animator anim;
+    private Rigidbody rb;
 
-    // membuat IK foot
-    [Range(0, 1f)] public float distanceToGround;
+    [Header("Foot IK Settings")]
+    [Range(0, 1f)] public float distanceToGround = 0.1f;
     public LayerMask layerMask;
+
     void Start()
     {
         anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            anim.SetBool("StatJalan", !anim.GetBool("StatJalan"));
+        Move();
+    }
+
+    private void Move()
+    {
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
+        if (h != 0 || v != 0)
+        {
+            Vector3 moveDir = new Vector3(h, 0f, v);
+            moveDir = Camera.main.transform.TransformDirection(moveDir);
+            moveDir.y = 0f;
+            moveDir.Normalize();
+
+            transform.rotation = Quaternion.LookRotation(moveDir);
+            transform.position += moveDir * movementSpeed * Time.deltaTime;
+
+            anim.SetBool("StatJalan", true);
+        }
+        else
+        {
+            anim.SetBool("StatJalan", false);
+        }
+
+        // AIM
+        anim.SetBool("StatAim", Input.GetMouseButton(1));
     }
 
     private void OnAnimatorIK(int layerIndex)
     {
-        // left foot
-        anim.SetIKPositionWeight(AvatarIKGoal.LeftFoot, 1);
-        anim.SetIKRotationWeight(AvatarIKGoal.LeftFoot, 1);
+        if (anim == null) return;
 
-        RaycastHit hit;
-        Ray ray = new Ray(anim.GetIKPosition(AvatarIKGoal.LeftFoot) + Vector3.up, Vector3.down);
-        if (Physics.Raycast(ray, out hit, distanceToGround + 1f, layerMask))
+        AdjustFootIK(AvatarIKGoal.LeftFoot);
+        AdjustFootIK(AvatarIKGoal.RightFoot);
+    }
+
+    private void AdjustFootIK(AvatarIKGoal foot)
+    {
+        anim.SetIKPositionWeight(foot, 1);
+        anim.SetIKRotationWeight(foot, 1);
+
+        Ray ray = new Ray(anim.GetIKPosition(foot) + Vector3.up, Vector3.down);
+
+        if (Physics.Raycast(ray, out RaycastHit hit, distanceToGround + 1f, layerMask))
         {
-            if (hit.transform.tag == "walkable")
+            if (hit.transform.CompareTag("walkable"))
             {
                 Vector3 footPosition = hit.point;
                 footPosition.y += distanceToGround;
-                anim.SetIKPosition(AvatarIKGoal.LeftFoot, footPosition);
-                // anim.SetIKRotation(AvatarIKGoal.LeftFoot, Quaternion.LookRotation(transform.forward, hit.normal));
+
+                anim.SetIKPosition(foot, footPosition);
+                anim.SetIKRotation(foot, Quaternion.LookRotation(transform.forward, hit.normal));
             }
         }
     }
